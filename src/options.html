@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tuỳ chỉnh AI + RAG</title>
+    <style>
+      body{font:14px system-ui,Segoe UI,Roboto;padding:16px;max-width:900px}
+      fieldset{border:1px solid #e5e7eb;border-radius:12px;padding:16px;margin-bottom:16px}
+      label{display:block;margin:8px 0 4px;font-weight:600}
+      input,textarea{width:100%;padding:8px;border:1px solid #e5e7eb;border-radius:8px}
+      code{background:#f3f4f6;padding:2px 6px;border-radius:6px}
+      button{padding:8px 12px;border-radius:10px;border:1px solid #e5e7eb;background:#111827;color:#fff}
+    </style>
+  </head>
+  <body>
+    <h2>Cấu hình Extension</h2>
+    <fieldset>
+      <legend>RAG Backend</legend>
+      <label>Endpoint</label>
+      <input id="ragEndpoint" placeholder="https://your-rag-backend.example.com" />
+      <label>API Key</label>
+      <input id="ragApiKey" type="password" />
+      <label>Tối thiểu tồn kho (minStock)</label>
+      <input id="minStock" type="number" value="1" />
+      <label>Yêu cầu cùng hoạt chất</label>
+      <input id="requireSameActiveIngredient" type="checkbox" checked />
+    </fieldset>
+    <fieldset>
+      <legend>Phát hiện giao diện</legend>
+      <label>Selectors thông báo không có kết quả (phân tách bởi dấu phẩy)</label>
+      <input id="noResultSelectors" placeholder=".empty-state,.no-result" />
+      <label>Selector danh sách sản phẩm</label>
+      <input id="productListSelector" placeholder=".product-list" />
+      <label>Các cụm từ hết hàng (phân tách bởi dấu phẩy)</label>
+      <input id="outOfStockTexts" placeholder="Hết hàng,0 tồn" />
+      <label>Selectors ô tìm kiếm</label>
+      <input id="searchInputSelectors" placeholder="input[type=search],.search-input" />
+      <label>Debounce (ms)</label>
+      <input id="debounceMs" type="number" value="600" />
+    </fieldset>
+    <div style="display:flex;gap:8px">
+      <button id="save">Lưu</button>
+      <button id="reset">Khôi phục mặc định</button>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Thuốc</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f9fafb;
+      padding: 20px;
+    }
+    .product-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      padding: 16px 20px;
+      max-width: 280px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    .product-title {
+      font-weight: bold;
+      color: #5b21b6; /* tím */
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    .product-title span {
+      font-weight: normal;
+      font-size: 14px;
+      color: #6b7280; /* xám */
+    }
+    .product-meta {
+      font-size: 14px;
+      color: #374151; /* xám đậm */
+      margin: 6px 0;
+    }
+    .product-stock {
+      font-size: 15px;
+      margin-top: 8px;
+    }
+    .product-stock b {
+      color: #059669; /* xanh lá */
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="product-card">
+    <div class="product-title">
+      Panadol Extra <span>(500mg)</span>
+    </div>
+    <div class="product-meta">Hoạt chất: Paracetamol</div>
+    <div class="product-stock">Tồn: <b>20</b></div>
+  </div>
+</body>
+</html>

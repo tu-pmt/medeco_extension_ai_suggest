@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "MISA eShop - AI Gợi ý Thuốc Thay Thế",
+  "version": "1.0.0",
+  "description": "Phát hiện hết hàng/không có kết quả và gợi ý sản phẩm còn tồn cùng hoạt chất (AI + RAG).",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://*.mshopkeeper.vn/*",
+    "https://*.misa.vn/*",
+    "http://localhost:3000/*"
+  ],
+  "background": {
+    "service_worker": "src/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_title": "AI Gợi ý Thuốc Thay Thế"
+  },
+  "options_page": "src/options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.mshopkeeper.vn/*",
+        "https://*.misa.vn/*"
+      ],
+      "js": ["src/content.js"],
+      "css": ["src/ui.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+}

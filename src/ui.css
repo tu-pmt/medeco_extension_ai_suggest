@@ -1,0 +1,111 @@
+#ai-suggest-popup {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2147483647;
+  background: #111827;
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  max-width: 380px;
+  width: calc(100% - 32px);
+}
+#ai-suggest-popup .hdr {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+#ai-suggest-popup .hdr .title {
+  font-weight: 600;
+}
+#ai-suggest-popup .bd {
+  max-height: 60vh;
+  overflow: auto;
+}
+#ai-suggest-popup .itm {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+#ai-suggest-popup .itm h4 {
+  margin: 0 0 4px;
+  font-size: 14px;
+}
+#ai-suggest-popup .meta {
+  font-size: 12px;
+  color: #cbd5e1;
+}
+#ai-suggest-popup .act {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+#ai-suggest-popup button {
+  background: #22c55e;
+  border: none;
+  color: #111827;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#ai-suggest-popup .ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+#ai-suggest-popup .ft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+}
+#ai-suggest-popup .badge {
+  font-size: 10px;
+  background: #065f46;
+  color: #d1fae5;
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+#ai-suggest-popup .product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 16px 20px;
+  max-width: 280px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#ai-suggest-popup .product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+#ai-suggest-popup .product-title {
+  font-weight: bold;
+  color: #5b21b6; /* tím */
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+#ai-suggest-popup .product-title span {
+  font-weight: normal;
+  font-size: 14px;
+  color: #6b7280; /* xám */
+}
+#ai-suggest-popup .product-meta {
+  font-size: 14px;
+  color: #374151; /* xám đậm */
+  margin: 6px 0;
+}
+#ai-suggest-popup .product-stock {
+  font-size: 15px;
+  margin-top: 8px;
+}
+#ai-suggest-popup .product-stock b {
+  color: #059669; /* xanh lá */
+  font-weight: bold;
+}
+.product-seacrh-code {
+  display: flex;
+  align-items: center;
+}
