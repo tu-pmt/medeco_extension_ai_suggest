@@ -1,14 +1,102 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="vi">
   <head>
-    <meta charset="utf-8" />
-    <title>AI Gợi ý Thuốc</title>
-    <style>body{font:14px system-ui,Segoe UI,Roboto;padding:12px;min-width:320px} label{display:block;margin:8px 0 4px}</style>
+    <meta charset="UTF-8" />
+    <title>Tra cứu sản phẩm</title>
+    <style>
+      body {
+        font-family: Open Sans, Tahoma, sans-serif !important;
+        padding: 10px;
+        max-width: 320px;
+        min-width: 250px;
+      }
+      input[type="text"] {
+        padding: 8px;
+        width: 90%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      .results-container {
+        margin-top: 10px;
+      }
+      .result-item {
+        /* padding: 10px; */
+        background: #f0f4f8;
+        margin-bottom: 10px;
+        border-radius: 6px;
+      }
+      .ghost {
+        background: transparent;
+        color: #fff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .ft {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 16px;
+      }
+      .badge {
+        font-size: 10px;
+        background: #065f46;
+        color: #d1fae5;
+        padding: 2px 6px;
+        border-radius: 999px;
+      }
+
+      .product-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        padding: 5px 8px;
+        max-width: 300px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .product-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+      .product-title {
+        font-weight: bold;
+        color: #5b21b6; /* tím */
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      .product-title span {
+        font-weight: normal;
+        font-size: 11px;
+        color: #6b7280; /* xám */
+      }
+      .product-meta {
+        font-size: 11px;
+        color: #374151; /* xám đậm */
+        margin: 0;
+      }
+      .product-stock {
+        font-size: 11px;
+      }
+      .product-stock b {
+        color: #059669; /* xanh lá */
+        font-weight: bold;
+      }
+      .product-seacrh-code {
+        display: flex;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
-    <h3>AI Gợi ý Thuốc Thay Thế</h3>
-    <div>
-      <a href="options.html" target="_blank">Cấu hình</a>
+    <div id="ai-suggest-popup ">
+      <div>
+        <a href="options.html" target="_blank">Cấu hình</a>
+      </div>
+      <h3>Tra cứu sản phẩm</h3>
+      <input
+        type="text"
+        id="search-product-input"
+        placeholder="Nhập tên thuốc hoặc hoạt chất"
+      />
+      <div id="results-container" style="margin-top:10px"></div>
     </div>
     <script src="popup.js"></script>
   </body>
